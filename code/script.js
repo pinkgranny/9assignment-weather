@@ -4,9 +4,18 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Stockholm,Sweden&units=m
 }).then((json) => {
   console.log(json)
   console.log(json.name)
-  document.getElementById("myP").innerHTML = json.name;
+  document.getElementById("city").innerHTML = json.name;
   console.log(json.main.temp)
+  document.getElementById("temp").innerHTML = json.main.temp;
+  if (temp < 0) {
+    document.getElementById("wrapper").className = "freezing";
+  } else if ( 0 <= temp && temp <= 13 ) {
+    document.getElementById("wrapper").className = "cool";
+  } else {
+    document.getElementById("wrapper").className = "warm";
+  }
   console.log(json.weather[0].main)
+  document.getElementById("weather").innerHTML = json.weather[0].main;
 })
 
 
