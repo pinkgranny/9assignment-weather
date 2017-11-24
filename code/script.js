@@ -11,7 +11,7 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Stockholm,Sweden&units=m
     document.getElementById("wrapper").className = "freezing";
   } else if ( 0 <= temp && temp <= 13 ) {
     document.getElementById("wrapper").className = "cool";
-  } else {
+  } else (temp >13){
     document.getElementById("wrapper").className = "warm";
   }
   console.log(json.weather[0].main)

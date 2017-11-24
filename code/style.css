@@ -52,6 +52,10 @@ h3 {
   /*background-color: blue;*/
 }
 
+h3 .freezing {
+  color: black;
+}
+
 .cool {
   background-image: url("http://i.telegraph.co.uk/multimedia/archive/02042/polar-bear-shake_2042566i.jpg");
   /*background-color: grey;*/
