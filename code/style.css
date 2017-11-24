@@ -4,6 +4,22 @@ html {
   background-color: #92a492;
 }
 
+/*#main-wrapper {
+
+}*/
+
+.main-freezing {
+  background-color: blue;
+}
+
+.main-cool {
+  background-color: grey;
+}
+
+.main-warm {
+  background-color: red;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -26,6 +42,7 @@ img {
 #wrapper {
   padding-top: 620px;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: auto;
   /*max-width: 620px;

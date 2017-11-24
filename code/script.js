@@ -3,22 +3,54 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Stockholm,Sweden&units=m
   return response.json()
 }).then((json) => {
   console.log(json)
+
   console.log(json.name)
   document.getElementById("city").innerHTML = json.name;
+
   console.log(json.main.temp)
   document.getElementById("temp").innerHTML = json.main.temp;
-  if (temp < 0) {
+  const temperature = json.main.temp;
+  if (temperature < 0) {
+    // document.getElementById("main-wrapper").className = "main-freezing";
     document.getElementById("wrapper").className = "freezing";
-  } else if ( 0 <= temp && temp <= 13 ) {
+  } else if ( 0 <= json.main.temp && json.main.temp <= 13 ) {
+    // document.getElementById("main-wrapper").className = "main-cool";
     document.getElementById("wrapper").className = "cool";
-  } else (temp >13){
+  } else {
+    // document.getElementById("main-wrapper").className = "main-warm";
     document.getElementById("wrapper").className = "warm";
   }
   console.log(json.weather[0].main)
+  // const weather = json.weather[0].main;
   document.getElementById("weather").innerHTML = json.weather[0].main;
 })
 
-
+// fetch("http://api.openweathermap.org/data/2.5/weather?q=Stockholm,Sweden&units=metric&APPID=3c91b0161e9dafd6c675a2f230453cef").then((response) => {
+//   return response.json()
+// }).then((json) => {
+//   console.log(json)
+//
+//   console.log(json.name)
+//   const city = json.name;
+//   document.getElementById("city").innerHTML = json.name;
+//
+//   console.log(json.main.temp)
+//   document.getElementById("temp").innerHTML = json.main.temp;
+//   const temperature = json.main.temp;
+//   if (temperature < 0) {
+//     document.getElementById("main-wrapper").className = "main-freezing";
+//     document.getElementById("wrapper").className = "freezing";
+//   } else if ( 0 <= json.main.temp && json.main.temp <= 13 ) {
+//     document.getElementById("main-wrapper").className = "main-cool";
+//     document.getElementById("wrapper").className = "cool";
+//   } else {
+//     document.getElementById("main-wrapper").className = "main-warm";
+//     document.getElementById("wrapper").className = "warm";
+//   }
+//   console.log(json.weather[0].main)
+//   const weather = json.weather[0].main;
+//   document.getElementById("weather").innerHTML = json.weather[0].main;
+// })
 
 
 
