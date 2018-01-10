@@ -1,3 +1,5 @@
+const baseTemp = 0;
+const midTemp = 13;
 
 fetch("http://api.openweathermap.org/data/2.5/weather?q=Stockholm,Sweden&units=metric&APPID=3c91b0161e9dafd6c675a2f230453cef").then((response) => {
   return response.json()
@@ -8,17 +10,26 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Stockholm,Sweden&units=m
   document.getElementById("city").innerHTML = json.name;
 
   console.log(json.main.temp)
-  document.getElementById("temp").innerHTML = json.main.temp;
+  document.getElementById("temp").innerHTML = json.main.temp + ' &#176;C';
   const temperature = json.main.temp;
-  if (temperature < 0) {
-    // document.getElementById("main-wrapper").className = "main-freezing";
-    document.getElementById("wrapper").className = "freezing";
-  } else if ( 0 <= json.main.temp && json.main.temp <= 13 ) {
-    // document.getElementById("main-wrapper").className = "main-cool";
-    document.getElementById("wrapper").className = "cool";
+  if (temperature < baseTemp) {
+    // document.getElementById("fred").src = "https://static.boredpanda.com/blog/wp-content/uploads/2016/02/cute-baby-polar-bear-day-photography-14__880.jpg";
+    console.log('fred is here');
+    document.getElementById("container").className = "main-freezing";
+    document.getElementById("weather-description").className = "freezing";
+    //     console.log('helloolooooo');
+    // document.getElementById("wrapper").className = "freezing";
+  }
+  else if ( baseTemp <= json.main.temp && json.main.temp <= midTemp) {
+        // document.getElementById("fred").src = "http://i.telegraph.co.uk/multimedia/archive/02042/polar-bear-shake_2042566i.jpg";
+        document.getElementById("container").className = "main-cool";
+    document.getElementById("weather-description").className = "cool";
+  //   document.getElementById("wrapper").className = "cool";
   } else {
-    // document.getElementById("main-wrapper").className = "main-warm";
-    document.getElementById("wrapper").className = "warm";
+        // document.getElementById("fred").src = "https://cdn.zmescience.com/wp-content/uploads/2015/01/Polar-Bear-animals-34693849-1440-900.jpg";
+  //   // document.getElementById("main-wrapper").className = "main-warm";
+  document.getElementById("container").className = "main-warm";
+    document.getElementById("weather-description").className = "warm";
   }
   console.log(json.weather[0].main)
   // const weather = json.weather[0].main;

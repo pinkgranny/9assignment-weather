@@ -1,7 +1,6 @@
-html {
+body {
   margin: 0;
   padding: 0;
-  background-color: #92a492;
 }
 
 /*#main-wrapper {
@@ -9,15 +8,15 @@ html {
 }*/
 
 .main-freezing {
-  background-color: blue;
+  background-color: #e6ebef;
 }
 
 .main-cool {
-  background-color: grey;
+  background-color: #aca29b;
 }
 
 .main-warm {
-  background-color: red;
+  background-color: #92a492;
 }
 
 .container {
@@ -27,6 +26,7 @@ html {
   max-width: 1024px;
   height: auto;
   margin: 0 auto;
+  background-color: white;
 }
 
 h1, h2 {

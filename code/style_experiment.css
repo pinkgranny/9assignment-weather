@@ -1,0 +1,78 @@
+body, html {
+  margin: 0;
+	padding: 0;
+}
+
+/*#main-wrapper {
+
+}*/
+
+.freezing {
+  background-image: url("https://static.boredpanda.com/blog/wp-content/uploads/2016/02/cute-baby-polar-bear-day-photography-14__880.jpg");
+}
+
+.cool {
+  background-image: url("http://i.telegraph.co.uk/multimedia/archive/02042/polar-bear-shake_2042566i.jpg");
+}
+
+.warm {
+  background-image: url("https://cdn.zmescience.com/wp-content/uploads/2015/01/Polar-Bear-animals-34693849-1440-900.jpg");
+}
+
+#weather-description {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#weather-description h3 {
+  padding-top:5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color:white;
+}
+#weather-description img {
+  position:relative;
+  top:0;
+  left:100px;
+  max-width: 500px;
+}
+.main-freezing {
+  background-color: #e6ebef;
+}
+
+.main-cool {
+  background-color: #aca29b;
+}
+
+.main-warm {
+  background-color: #92a492;
+}
+
+#container {
+  padding:0;
+  margin:0;
+  width:auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1d3442;
+}
+
+
+/*
+alt="Bear in snow"
+alt="Bear in rain"
+alt="Bear in heat"
+
+.image {
+  <img src="https://cdn.zmescience.com/wp-content/uploads/2015/01/Polar-Bear-animals-34693849-1440-900.jpg" alt="Bear in heat">
+  <img src="http://i.telegraph.co.uk/multimedia/archive/02042/polar-bear-shake_2042566i.jpg" alt="Bear in rain">
+  <img src="https://static.boredpanda.com/blog/wp-content/uploads/2016/02/cute-baby-polar-bear-day-photography-14__880.jpg" alt="Bear in snow">
+}*/
